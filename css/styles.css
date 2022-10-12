@@ -116,14 +116,15 @@ body {
 .contact-list {
   display: flex;
   margin-left: auto;
-  gap: 50px;
+  gap: 30px;
 }
 
 .contact-item {
 }
 
 .contact-link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -132,6 +133,13 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
+
+.icon-envelope,
+.icon-smartphone{
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
@@ -224,30 +232,13 @@ body {
   width: calc((100% - 90px) / 4);
 }
 
-.advantage-item::before {
-  content: '';
-  display: block;
+.advantage-box-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   margin-bottom: 30px;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: var(--secondary-background-color);
-}
-
-.advantage-item.icon-antenna::before {
-  background-image: url(../images/advantage-icon/icon-antenna.svg);
-}
-
-.advantage-item.icon-clock::before {
-  background-image: url(../images/advantage-icon/icon-clock.svg);
-}
-
-.advantage-item.icon-diagram::before {
-  background-image: url(../images/advantage-icon/icon-diagram.svg);
-}
-
-.advantage-item.icon-astronaut::before {
-  background-image: url(../images/advantage-icon/icon-astronaut.svg);
 }
 
 .advantage-subtitel {
@@ -362,30 +353,36 @@ body {
   text-align: center;
 }
 
-.social-icon-list {
+.team-icon-list {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-.social-icon-item {
+.team-icon-item {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
 }
 
-.social-icon-link {
+.team-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  display: block;
+  border-radius: 50%;
+  color: var(--clientage-border-color);
 }
 
-.social-icon-item.team-icon-item {
-  background-color: teal;
+.team-icon-social{
+ fill: currentColor;
 }
 
-.social-icon-link.team-icon-link{
-
+.team-icon-link:hover,
+.team-icon-link:focus{
+  color: var(--primary-color);
+  background-color: var(--accent-color);
 }
+
 
 /* Постійні клієнти */
 
@@ -427,6 +424,7 @@ body {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
   gap: 70px;
 }
 
@@ -487,7 +485,6 @@ body {
 }
 
 .footer-social-box {
-  padding-top: 12px;
 }
 .footer-social-subtitel {
   margin-bottom: 20px;
@@ -500,11 +497,10 @@ body {
   color: var(--primary-color);
 }
 
-
 .social-icon-item.footer-icon-item {
   background: var(--footer-icon-color);
 }
-.social-icon-link.footer-icon-link{
+.social-icon-link.footer-icon-link {
 }
 
 /* Сторінка портфоліо */
@@ -538,8 +534,7 @@ body {
   letter-spacing: 0.03em;
   cursor: pointer;
   background-color: var(--secondary-background-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border: transparent;
   border-radius: 4px;
 }
@@ -563,6 +558,14 @@ body {
 }
 
 .card-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card-link:hover,
+.card-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-image {
